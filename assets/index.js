@@ -129,6 +129,12 @@ ${projectTestInstructions}
 `;
 
 // TODO: Create a function to initialize app
+function init = () => {
+  promptUser()
+  .then((answers) => writeFile("README.md", generateReadMe(answers)))
+  .then(() => console.log("Successfully created README.md!"))
+  .catch((err) => console.error(err))
+}
 
 // Function call to initialize app
 init();
