@@ -72,6 +72,61 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+const generateReadMe = ({
+  projectTitle,
+  projectDescription,
+  projectInstallation,
+  projectUsage,
+  webLink,
+  imagePath,
+  collaborator,
+  collaboratorGithub,
+  projectLicense,
+  projectFeatures,
+  projectTestInstructions,
+}) => `# ${projectTitle}
+
+## Description
+
+${projectDescription}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+${projectInstallation}
+
+## Usage
+
+${projectUsage}
+
+To navigate to the web application in your browser, click [here](${webLink})
+
+![screenshot of web application](${imagePath})
+
+## Credits
+
+Collaborators include:
+
+[${collaborator}](${collaboratorGithub})
+
+## License
+
+${projectLicense}
+
+## Features
+
+${projectFeatures}
+
+## Tests
+
+${projectTestInstructions}
+`;
 
 // TODO: Create a function to initialize app
 
