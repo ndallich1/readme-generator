@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
-const fs = require("fs");
+const { writeFile } = require("fs").promises;
 
 // TODO: Create an array of questions for user input
-const questions = [
-  inquirer.prompt([
+const promptUser = () => {
+  return inquirer.prompt([
     {
       type: "input",
       name: "projectTitle",
@@ -68,8 +68,8 @@ const questions = [
       name: "projectTestInstructions",
       message: "How would a user test your project to see if it works?",
     },
-  ]),
-];
+  ]);
+};
 
 // TODO: Create a function to write README file
 const generateReadMe = ({
