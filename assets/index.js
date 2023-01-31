@@ -37,7 +37,7 @@ const promptUser = () => {
         "Is there a screenshot of your application? Paste your local file path to the image below",
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "projectCredits",
       message: "Did you have any collaborators?",
       choices: ["yes", "no"],
@@ -53,7 +53,7 @@ const promptUser = () => {
       message: "What is the collaborator's Github username?",
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "projectLicense",
       message: "What license did you use?",
       choices: ["MIT", "Apache", "GNU"],
